@@ -65,8 +65,12 @@ $colr-texto:#333333b4;
 
             .song_details {
                 text-align: center;
-                margin: 30px 0;
+                margin: 12px 0;
                 color: $colr-texto;
+
+                p {
+                    margin: 1%;
+                }
 
                 .name {
                     font-size: 21px;
@@ -156,14 +160,14 @@ $colr-texto:#333333b4;
 
                     i {
                         font-size: 54px;
-                         display: flex;
-                         align-items: center;
-                         justify-content: center;
-                     }
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
 
                 .fa-redo-alt {
-                    font-size: 30px;
+                    font-size: 28px;
                 }
 
                 .material-icons {
