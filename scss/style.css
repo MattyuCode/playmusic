@@ -148,7 +148,7 @@
 }
 
 .content_music .card .wrapper .controls i {
-  font-size: 28px;
+  font-size: 25px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -163,9 +163,9 @@
   margin-right: -13px;
   -webkit-box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
   border-radius: 50%;
   display: -ms-grid;
   display: grid;
@@ -177,9 +177,9 @@
   margin-left: -13px;
   -webkit-box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
   border-radius: 50%;
   display: -ms-grid;
   display: grid;
@@ -213,12 +213,12 @@
 }
 
 .content_music .card .wrapper .controls .fa-redo-alt {
-  font-size: 28px;
+  font-size: 25px;
   -webkit-box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
   border-radius: 50%;
   display: -ms-grid;
   display: grid;
@@ -228,10 +228,10 @@
 .content_music .card .wrapper .controls .material-icons {
   -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-  font-size: 35px;
-  width: 45px;
-  height: 45px;
-  line-height: 45px;
+  font-size: 31px;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
   border-radius: 10px;
   display: -ms-grid;
   display: grid;
