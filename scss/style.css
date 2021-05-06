@@ -148,8 +148,7 @@
 }
 
 .content_music .card .wrapper .controls i {
-  z-index: 100;
-  font-size: 28px;
+  font-size: 25px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -172,6 +171,7 @@
   display: grid;
   place-content: center;
   padding-right: 5px;
+  z-index: 0;
 }
 
 .content_music .card .wrapper .controls #next {
@@ -199,7 +199,6 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
-  z-index: 12;
 }
 
 .content_music .card .wrapper .controls .play-pause i {
@@ -212,7 +211,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 100;
 }
 
 .content_music .card .wrapper .controls .fa-redo-alt {
@@ -229,8 +227,6 @@
 }
 
 .content_music .card .wrapper .controls .material-icons {
-  -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
   font-size: 31px;
   width: 43px;
   height: 43px;
