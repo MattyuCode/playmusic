@@ -148,6 +148,7 @@
 }
 
 .content_music .card .wrapper .controls i {
+  z-index: 100;
   font-size: 25px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -210,6 +211,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 100;
 }
 
 .content_music .card .wrapper .controls .fa-redo-alt {
