@@ -171,7 +171,6 @@
   display: grid;
   place-content: center;
   padding-right: 5px;
-  z-index: 0;
 }
 
 .content_music .card .wrapper .controls #next {
@@ -235,5 +234,6 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
+  z-index: 0;
 }
 /*# sourceMappingURL=style.css.map */

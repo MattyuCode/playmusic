@@ -173,7 +173,6 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     display: grid;
                     place-content: center;
                     padding-right: 5px;
-                    z-index: 0;
                 }
 
                 #next {
@@ -231,6 +230,8 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     border-radius: 10px;
                     display: grid;
                     place-content: center;
+                    z-index: 0;
+
                 }
             }
         }
