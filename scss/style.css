@@ -139,6 +139,12 @@
 
 .content_music .card .wrapper .controls {
   margin: 40px 0 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .content_music .card .wrapper .controls i {
@@ -189,6 +195,12 @@
   -webkit-box-shadow: -3px -3px 7px rgba(238, 238, 238, 0.919), 3px 3px 6px rgba(0, 0, 0, 0.5);
           box-shadow: -3px -3px 7px rgba(238, 238, 238, 0.919), 3px 3px 6px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.content_music .card .wrapper .controls .play-pause i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,7 +212,20 @@
           justify-content: center;
 }
 
-.content_music .card .wrapper .controls .list_music {
+.content_music .card .wrapper .controls .list_music1 {
+  font-size: 25px;
+  -webkit-box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.content_music .card .wrapper .controls .list_music2 {
   -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
   width: 43px;
@@ -218,7 +243,7 @@
           justify-content: center;
 }
 
-.content_music .card .wrapper .controls .list_music i {
+.content_music .card .wrapper .controls .list_music2 i {
   font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */
