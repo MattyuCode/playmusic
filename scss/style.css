@@ -6,10 +6,12 @@
           box-sizing: border-box;
 }
 
+como guardas shadow en var
 .content_music {
   background: #333;
 }
 
+como guardas shadow en var
 .content_music .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18,6 +20,7 @@
   min-height: 100vh;
 }
 
+como guardas shadow en var
 .content_music .card {
   padding: 25px 30px;
   border-radius: 15px;
@@ -26,14 +29,19 @@
           box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+como guardas shadow en var
 .content_music .card .wrapper i {
   cursor: pointer;
   font-size: 1.2rem;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .top_bar,
+como guardas shadow en var
 .content_music .card .wrapper .progress_bar,
+como guardas shadow en var
 .content_music .card .wrapper .timer,
+como guardas shadow en var
 .content_music .card .wrapper .controls {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,14 +54,19 @@
           justify-content: space-between;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .top_bar span,
+como guardas shadow en var
 .content_music .card .wrapper .progress_bar span,
+como guardas shadow en var
 .content_music .card .wrapper .timer span,
+como guardas shadow en var
 .content_music .card .wrapper .controls span {
   font-size: 18px;
   color: #333333b4;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .image_area {
   height: 256px;
   width: 100%;
@@ -64,6 +77,7 @@
   margin: 10px 0 12px 0;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .image_area img {
   height: 100%;
   width: 100%;
@@ -71,25 +85,30 @@
      object-fit: cover;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .song_details {
   text-align: center;
   margin: 12px 0;
   color: #333333b4;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .song_details p {
   margin: 1%;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .song_details .name {
   font-size: 21px;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .song_details .artist {
   opacity: 0.9;
   font-size: 18px;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .progress_area {
   height: 6px;
   width: 100%;
@@ -98,6 +117,7 @@
   cursor: pointer;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .progress_area .progress_bar {
   height: inherit;
   width: 50%;
@@ -107,6 +127,7 @@
   background: linear-gradient(90deg, #00c3ff, #09dd33);
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .progress_area .progress_bar::before {
   content: '';
   position: absolute;
@@ -124,19 +145,23 @@
   transition: opacity 0.25 ease;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .progress_area:hover .progress_bar::before {
   opacity: 1;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .progress_area .timer {
   margin-top: 3px;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .progress_area .timer span {
   font-size: 15px;
   color: #333333b4;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls {
   margin: 40px 0 5px 0;
   display: -webkit-box;
@@ -147,6 +172,7 @@
           align-items: center;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls i {
   font-size: 28px;
   -webkit-user-select: none;
@@ -159,6 +185,7 @@
   -webkit-text-fill-color: transparent;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls #prev {
   margin-right: -13px;
   -webkit-box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
@@ -173,6 +200,7 @@
   padding-right: 5px;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls #next {
   margin-left: -13px;
   -webkit-box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
@@ -187,6 +215,7 @@
   padding-left: 5px;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls .play-pause {
   width: 51px;
   height: 51px;
@@ -204,6 +233,7 @@
   place-content: center;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls .play-pause i {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,6 +246,7 @@
           justify-content: center;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls .fa-redo-alt {
   font-size: 28px;
   -webkit-box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
@@ -229,10 +260,9 @@
   place-content: center;
 }
 
+como guardas shadow en var
 .content_music .card .wrapper .controls .material-icons {
   font-size: 35px;
-  -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
   width: 45px;
   height: 45px;
   line-height: 45px;

@@ -10,6 +10,10 @@ $light: #dde1e7;
 $dark:#333;
 $colr-texto:#333333b4;
 $background: rgb(255, 255, 255);
+$boxsh: -2px -2px 5px #ffff,
+3px 3px 6px rgba(0, 0, 0, 0.15),
+inset -2px -2px 5px rgba(255, 255, 255, 0.3),
+inset 3px 3px 6px rgba(0, 0, 0, 0.1);  como guardas shadow en var
 
 // ------var
 
@@ -208,10 +212,11 @@ $background: rgb(255, 255, 255);
 
                 .material-icons {
                     font-size: 35px;
-                    box-shadow: -2px -2px 5px #ffff,
-                        3px 3px 6px rgba(0, 0, 0, 0.15),
-                        inset -2px -2px 5px rgba(255, 255, 255, 0.3),
-                        inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+                    // box-shadow: -2px -2px 5px #ffff,
+                    //     3px 3px 6px rgba(0, 0, 0, 0.15),
+                    //     inset -2px -2px 5px rgba(255, 255, 255, 0.3),
+                    //     inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+                    // box-shadow: $boxsh;
                     width: 45px;
                     height: 45px;
                     line-height: 45px;
