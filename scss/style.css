@@ -213,7 +213,6 @@
 }
 
 .content_music .card .wrapper .controls .list_music1 {
-  font-size: 25px;
   -webkit-box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
   width: 43px;
@@ -223,6 +222,10 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
+}
+
+.content_music .card .wrapper .controls .list_music1 i {
+  font-size: 25px;
 }
 
 .content_music .card .wrapper .controls .list_music2 {
