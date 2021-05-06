@@ -199,6 +199,7 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
+  z-index: 100;
 }
 
 .content_music .card .wrapper .controls .play-pause i {

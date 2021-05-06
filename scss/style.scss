@@ -200,13 +200,14 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     border-radius: 50%;
                     display: grid;
                     place-content: center;
+                    z-index: 100;
+
 
                     i {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                    z-index: 100;
-
+                        z-index: 100;
                     }
                 }
 
