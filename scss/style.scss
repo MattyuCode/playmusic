@@ -152,8 +152,8 @@ $background: rgb(255, 255, 255);
 
             .controls {
                 margin: 40px 0 5px 0;
-                display: flex;
-                align-items: center;
+                // display: flex;
+                // align-items: center;
 
                 i {
 
@@ -234,8 +234,8 @@ $background: rgb(255, 255, 255);
                     height: 43px;
                     line-height: 43px;
                     border-radius: 50%;
-                    display: grid;
-                    place-content: center;
+                    // display: grid;
+                    // place-content: center;
                 }
 
                 .material-icons {
@@ -245,8 +245,8 @@ $background: rgb(255, 255, 255);
                     height: 43px;
                     line-height: 43px;
                     border-radius: 10px;
-                    display: grid;
-                    place-content: center;
+                    // display: grid;
+                    // place-content: center;
                 }
             }
         }
