@@ -149,8 +149,8 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
 
             .controls {
                 margin: 40px 0 5px 0;
-                // display: flex;
-                // align-items: center;
+                display: flex;
+                align-items: center;
 
                 i {
 
@@ -171,8 +171,8 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     height: 43px;
                     line-height: 43px;
                     border-radius: 50%;
-                    // display: grid;
-                    // place-content: center;
+                    display: grid;
+                    place-content: center;
                     padding-right: 5px;
                 }
 
@@ -186,8 +186,8 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     height: 43px;
                     line-height: 43px;
                     border-radius: 50%;
-                    // display: grid;
-                    // place-content: center;
+                    display: grid;
+                    place-content: center;
                     padding-left: 5px;
                 }
 
@@ -198,21 +198,10 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     border: 4px solid rgb(8, 175, 175);
                     box-shadow: -3px -3px 7px rgba(238, 238, 238, 0.919), 3px 3px 6px rgba(0, 0, 0, 0.5);
                     border-radius: 50%;
-                    display: -webkit-box;
-                    display: -ms-flexbox;
                     display: flex;
-                    -webkit-box-align: center;
-                    -ms-flex-align: center;
                     align-items: center;
-                    -webkit-box-pack: center;
-                    -ms-flex-pack: center;
                     justify-content: center;
 
-                    i {
-                        // display: flex;
-                        // align-items: center;
-                        // justify-content: center;
-                    }
                 }
 
                 .fa-redo-alt {
@@ -225,35 +214,21 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     height: 43px;
                     line-height: 43px;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    display: grid;
+                    place-content: center;
                 }
 
+
+
                 .material-icons {
-                    -webkit-box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933),
-                        3px 3px 6px rgba(0, 0, 0, 0.15),
-                        inset -2px -2px 5px rgba(255, 255, 255, 0.3),
-                        inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-                    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933),
-                        3px 3px 6px rgba(0, 0, 0, 0.15),
-                        inset -2px -2px 5px rgba(255, 255, 255, 0.3),
-                        inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-                    font-size: 31px;
+                    box-shadow: $arriba-abajo4;
+                    font-size: 30px;
                     width: 43px;
                     height: 43px;
                     line-height: 43px;
                     border-radius: 10px;
-                    display: -webkit-box;
-
-                    display: -ms-flexbox;
-                    display: flex;
-                    -webkit-box-align: center;
-                        -ms-flex-align: center;
-                            align-items: center;
-                    -webkit-box-pack: center;
-                        -ms-flex-pack: center;
-                            justify-content: center;
+                    // display: grid;
+                    // place-content: center;
                 }
             }
         }

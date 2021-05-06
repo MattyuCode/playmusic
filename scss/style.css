@@ -139,6 +139,12 @@
 
 .content_music .card .wrapper .controls {
   margin: 40px 0 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .content_music .card .wrapper .controls i {
@@ -161,6 +167,9 @@
   height: 43px;
   line-height: 43px;
   border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   padding-right: 5px;
 }
 
@@ -172,6 +181,9 @@
   height: 43px;
   line-height: 43px;
   border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
   padding-left: 5px;
 }
 
@@ -187,11 +199,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .content_music .card .wrapper .controls .fa-redo-alt {
@@ -202,33 +214,18 @@
   height: 43px;
   line-height: 43px;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 .content_music .card .wrapper .controls .material-icons {
-  -webkit-box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-  font-size: 31px;
+  -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+  font-size: 30px;
   width: 43px;
   height: 43px;
   line-height: 43px;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
