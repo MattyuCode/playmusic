@@ -149,8 +149,8 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
 
             .controls {
                 margin: 40px 0 5px 0;
-                display: flex;
-                align-items: center;
+                // display: flex;
+                // align-items: center;
 
                 i {
 
@@ -171,8 +171,8 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     height: 43px;
                     line-height: 43px;
                     border-radius: 50%;
-                    display: grid;
-                    place-content: center;
+                    // display: grid;
+                    // place-content: center;
                     padding-right: 5px;
                 }
 
@@ -186,8 +186,8 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     height: 43px;
                     line-height: 43px;
                     border-radius: 50%;
-                    display: grid;
-                    place-content: center;
+                    // display: grid;
+                    // place-content: center;
                     padding-left: 5px;
                 }
 
@@ -209,9 +209,9 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     justify-content: center;
 
                     i {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        // display: flex;
+                        // align-items: center;
+                        // justify-content: center;
                     }
                 }
 
@@ -245,7 +245,7 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                     line-height: 43px;
                     border-radius: 10px;
                     display: -webkit-box;
-                    
+
                     display: -ms-flexbox;
                     display: flex;
                     -webkit-box-align: center;

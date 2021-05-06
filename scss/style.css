@@ -139,12 +139,6 @@
 
 .content_music .card .wrapper .controls {
   margin: 40px 0 5px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .content_music .card .wrapper .controls i {
@@ -167,9 +161,6 @@
   height: 43px;
   line-height: 43px;
   border-radius: 50%;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
   padding-right: 5px;
 }
 
@@ -181,9 +172,6 @@
   height: 43px;
   line-height: 43px;
   border-radius: 50%;
-  display: -ms-grid;
-  display: grid;
-  place-content: center;
   padding-left: 5px;
 }
 
@@ -204,18 +192,6 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.content_music .card .wrapper .controls .play-pause i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .content_music .card .wrapper .controls .fa-redo-alt {
