@@ -65,6 +65,7 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
 
                     .checkbox:checked~.toogle-theme .fa-moon {
                         opacity: 0;
+                        transform: translateX(-50px);
                     }
 
                     .toogle-theme {
@@ -92,6 +93,7 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                         .fa-sun {
                             color: $sol;
                             opacity: 0;
+                            transform: translateX(50px);
                         }
 
                         .fa-moon {

@@ -39,6 +39,8 @@
 
 .content_music .card .wrapper .top_bar .boton-dark .checkbox:checked ~ .toogle-theme .fa-moon {
   opacity: 0;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .content_music .card .wrapper .top_bar .boton-dark .toogle-theme {
@@ -76,6 +78,8 @@
 .content_music .card .wrapper .top_bar .boton-dark .toogle-theme .fa-sun {
   color: #348ceb;
   opacity: 0;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
 }
 
 .content_music .card .wrapper .top_bar .boton-dark .toogle-theme .fa-moon {
