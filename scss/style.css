@@ -27,22 +27,6 @@
           box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.content_music .card .wrapper .top_bar .boton-dark .checkbox {
-  display: none;
-}
-
-.content_music .card .wrapper .top_bar .boton-dark .checkbox:checked ~ .toogle-theme .fa-sun {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.content_music .card .wrapper .top_bar .boton-dark .checkbox:checked ~ .toogle-theme .fa-moon {
-  opacity: 0;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
-}
-
 .content_music .card .wrapper .top_bar .boton-dark .toogle-theme {
   -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
@@ -86,6 +70,22 @@
   color: #000;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .checkbox {
+  display: none;
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .checkbox:checked ~ .toogle-theme .fa-sun {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .checkbox:checked ~ .toogle-theme .fa-moon {
+  opacity: 0;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .content_music .card .wrapper i {

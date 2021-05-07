@@ -54,20 +54,6 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
         .wrapper {
             .top_bar {
                 .boton-dark {
-                    .checkbox {
-                        display: none;
-                    }
-
-                    .checkbox:checked~.toogle-theme .fa-sun {
-                        opacity: 1;
-                        transform: translateX(0px);
-                    }
-
-                    .checkbox:checked~.toogle-theme .fa-moon {
-                        opacity: 0;
-                        transform: translateX(-50px);
-                    }
-
                     .toogle-theme {
                         box-shadow: $arriba-abajo4;
                         width: 40px;
@@ -100,6 +86,20 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                             color: #000;
                             transform: translateX(0);
                         }
+                    }
+
+                    .checkbox {
+                        display: none;
+                    }
+
+                    .checkbox:checked~.toogle-theme .fa-sun {
+                        opacity: 1;
+                        transform: translateX(0px);
+                    }
+
+                    .checkbox:checked~.toogle-theme .fa-moon {
+                        opacity: 0;
+                        transform: translateX(-50px);
                     }
                 }
             }
