@@ -19,11 +19,53 @@
 }
 
 .content_music .card {
+  padding-top: 20px !important;
   padding: 25px 30px;
   border-radius: 15px;
   background: #dde1e7;
   -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .checkboxk {
+  display: none;
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .toogle-theme {
+  -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  line-height: 40%;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .toogle-theme:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .toogle-theme i {
+  font-size: 25px;
+  position: absolute;
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .toogle-theme .fa-sun {
+  color: #ebd634;
+  opacity: 0;
+}
+
+.content_music .card .wrapper .top_bar .boton-dark .toogle-theme .fa-moon {
+  color: #000;
 }
 
 .content_music .card .wrapper i {
