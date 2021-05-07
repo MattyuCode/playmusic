@@ -159,10 +159,9 @@
   -webkit-text-fill-color: transparent;
 }
 
-.content_music .card .wrapper .controls #prev {
-  margin-right: -13px;
-  -webkit-box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+.content_music .card .wrapper .controls .prev {
+  -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
   width: 43px;
   height: 43px;
   line-height: 43px;
@@ -173,10 +172,12 @@
   padding-right: 5px;
 }
 
-.content_music .card .wrapper .controls #next {
-  margin-left: -13px;
-  -webkit-box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+.content_music .card .wrapper .controls .prev:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.content_music .card .wrapper .controls .next {
   width: 43px;
   height: 43px;
   line-height: 43px;
@@ -185,6 +186,13 @@
   display: grid;
   place-content: center;
   padding-left: 5px;
+  -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content_music .card .wrapper .controls .next:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .content_music .card .wrapper .controls .play-pause {
@@ -200,9 +208,14 @@
   place-content: center;
 }
 
+.content_music .card .wrapper .controls .play-pause i:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .content_music .card .wrapper .controls .list_music1 {
-  -webkit-box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.933), 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
   width: 43px;
   height: 43px;
   line-height: 43px;
@@ -210,6 +223,11 @@
   display: -ms-grid;
   display: grid;
   place-content: center;
+}
+
+.content_music .card .wrapper .controls .list_music1:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .content_music .card .wrapper .controls .list_music1 i {
@@ -232,6 +250,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.content_music .card .wrapper .controls .list_music2:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .content_music .card .wrapper .controls .list_music2 i {
