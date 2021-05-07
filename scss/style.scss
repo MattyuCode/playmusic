@@ -11,6 +11,8 @@ $dark:#333;
 $colr-texto:#333333b4;
 $background: rgb(255, 255, 255);
 $sol: rgb(52, 140, 235);
+$grisClaro: #C8C8C8;
+
 
 // ------BOX-SHADOW------------
 $arriba-abajo1:3px 3px 4px #8f8f8f,
@@ -33,10 +35,18 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
 
 // ------var
 
-
+body {
+    &.dark {
+        background: $light;
+    }
+}
 
 .content_music {
     background: $dark;
+
+    body.dark & {
+        background: $light;
+    }
 
     .row {
         display: flex;
@@ -50,6 +60,11 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
         border-radius: 15px;
         background: $light;
         box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+
+        body.dark & {
+            background: $dark;
+            color: beige;
+        }
 
         .wrapper {
             .top_bar {
@@ -120,7 +135,12 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                 span {
                     font-size: 18px;
                     color: $colr-texto;
+
+                    body.dark & {
+                        color: beige;
+                    }
                 }
+
             }
 
             .image_area {
@@ -142,6 +162,10 @@ inset 3px 3px 6px rgba(0, 0, 0, 0.1);
                 text-align: center;
                 margin: 12px 0;
                 color: $colr-texto;
+
+                body.dark & {
+                    color: beige;
+                }
 
                 p {
                     margin: 1%;

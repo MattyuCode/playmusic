@@ -6,8 +6,16 @@
           box-sizing: border-box;
 }
 
+body.dark {
+  background: #dde1e7;
+}
+
 .content_music {
   background: #333;
+}
+
+body.dark .content_music {
+  background: #dde1e7;
 }
 
 .content_music .row {
@@ -25,6 +33,11 @@
   background: #dde1e7;
   -webkit-box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .content_music .card {
+  background: #333;
+  color: beige;
 }
 
 .content_music .card .wrapper .top_bar .boton-dark .toogle-theme {
@@ -116,6 +129,13 @@
   color: #333333b4;
 }
 
+body.dark .content_music .card .wrapper .top_bar span, body.dark
+.content_music .card .wrapper .progress_bar span, body.dark
+.content_music .card .wrapper .timer span, body.dark
+.content_music .card .wrapper .controls span {
+  color: beige;
+}
+
 .content_music .card .wrapper .image_area {
   height: 256px;
   width: 100%;
@@ -137,6 +157,10 @@
   text-align: center;
   margin: 12px 0;
   color: #333333b4;
+}
+
+body.dark .content_music .card .wrapper .song_details {
+  color: beige;
 }
 
 .content_music .card .wrapper .song_details p {

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <!-- materializecss -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- google icons -->
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <main>
+    <header>
         <section class="content_music">
             <div class="container">
                 <div class="row ">
@@ -35,7 +35,7 @@
                                     <span>Now Playing</span>
                                     <div class="boton-dark">
                                         <input type="checkbox" id="checkbox" class="checkbox">
-                                        <label for="checkbox" class="toogle-theme">
+                                        <label for="checkbox" id="switch" class="toogle-theme">
                                             <i class="fas fa-moon"></i>
                                             <i class="fas fa-sun"></i>
                                         </label>
@@ -90,7 +90,7 @@
                     </div>
                 </div>
         </section>
-    </main>
+    </header>
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -100,10 +100,11 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
+    </script> -->
 </body>
 
 </html>
