@@ -6,8 +6,25 @@
           box-sizing: border-box;
 }
 
+body {
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+}
+
 body.dark {
   background: #dde1e7;
+}
+
+.boton-dark .toogle-theme::before {
+  content: '\f186';
+  font-family: fontAwesome;
+  color: #000;
+}
+
+body.dark .boton-dark .toogle-theme::before {
+  content: '\f185 ';
+  font-family: fontAwesome;
+  color: #ffffff;
 }
 
 .content_music {
@@ -40,7 +57,11 @@ body.dark .content_music .card {
   color: beige;
 }
 
-.content_music .card .wrapper .top_bar .boton-dark .toogle-theme {
+.content_music .card .wrapper {
+  position: relative;
+}
+
+.content_music .card .wrapper .boton-dark .toogle-theme {
   -webkit-box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
           box-shadow: -2px -2px 5px #ffff, 3px 3px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 5px rgba(255, 255, 255, 0.3), inset 3px 3px 6px rgba(0, 0, 0, 0.1);
   width: 40px;
@@ -50,7 +71,9 @@ body.dark .content_music .card {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  cursor: pointer;
   position: relative;
+  font-size: 1.4rem;
   overflow: hidden;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
@@ -58,47 +81,18 @@ body.dark .content_music .card {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.content_music .card .wrapper .top_bar .boton-dark .toogle-theme:hover {
+.content_music .card .wrapper .boton-dark .toogle-theme:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.content_music .card .wrapper .top_bar .boton-dark .toogle-theme i {
+.content_music .card .wrapper .boton-dark .toogle-theme i {
   font-size: 25px;
   position: absolute;
   -webkit-transition: opacity 0.5s ease, color 0.5s ease, -webkit-transform 0.5s ease;
   transition: opacity 0.5s ease, color 0.5s ease, -webkit-transform 0.5s ease;
   transition: transform 0.5s ease, opacity 0.5s ease, color 0.5s ease;
   transition: transform 0.5s ease, opacity 0.5s ease, color 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-.content_music .card .wrapper .top_bar .boton-dark .toogle-theme .fa-sun {
-  color: #348ceb;
-  opacity: 0;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
-}
-
-.content_music .card .wrapper .top_bar .boton-dark .toogle-theme .fa-moon {
-  color: #000;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.content_music .card .wrapper .top_bar .boton-dark .checkbox {
-  display: none;
-}
-
-.content_music .card .wrapper .top_bar .boton-dark .checkbox:checked ~ .toogle-theme .fa-sun {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-.content_music .card .wrapper .top_bar .boton-dark .checkbox:checked ~ .toogle-theme .fa-moon {
-  opacity: 0;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
 }
 
 .content_music .card .wrapper i {
@@ -294,6 +288,10 @@ body.dark .content_music .card .wrapper .song_details {
   place-content: center;
 }
 
+.content_music .card .wrapper .controls .play-pause i {
+  font-size: 33px;
+}
+
 .content_music .card .wrapper .controls .play-pause i:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
@@ -345,5 +343,107 @@ body.dark .content_music .card .wrapper .song_details {
 
 .content_music .card .wrapper .controls .list_music2 i {
   font-size: 30px;
+}
+
+.content_music .card .musicList {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  opacity: 0;
+  pointer-events: none;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 0, 247, 0.076)), to(rgba(34, 0, 255, 0.118)));
+  background: linear-gradient(to left, rgba(255, 0, 247, 0.076), rgba(34, 0, 255, 0.118));
+  -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.282);
+          box-shadow: 0 15px 25px rgba(0, 0, 0, 0.282);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px 4px #8f8f8f, -3px -3px 4px #f8f8f8;
+          box-shadow: 3px 3px 4px #8f8f8f, -3px -3px 4px #f8f8f8;
+  -webkit-transition: all 0.14s ease-in-out;
+  transition: all 0.14s ease-in-out;
+}
+
+.content_music .card .musicList .header {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content_music .card .musicList .header .row-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 15px;
+  color: #333333b4;
+}
+
+.content_music .card .musicList .header .row-content i {
+  cursor: default;
+}
+
+.content_music .card .musicList .header .row-content span {
+  margin-left: 15px;
+}
+
+.content_music .card .musicList .header #close {
+  font-size: 22px;
+  color: #972424;
+}
+
+.content_music .card .musicList .ultra {
+  margin: 5px;
+  max-height: 310px;
+  overflow: auto;
+}
+
+.content_music .card .musicList .ultra::-webkit-scrollbar {
+  width: 0px;
+}
+
+.content_music .card .musicList li {
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.content_music .card .musicList li p {
+  margin-top: 0;
+  margin-bottom: 1px;
+}
+
+.content_music .card .musicList hr {
+  margin: 5px;
+  border: 0;
+  border-top: 1px solid rgba(51, 51, 51, 0.275);
+}
+
+.content_music .card .musicList.show {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
 }
 /*# sourceMappingURL=style.css.map */

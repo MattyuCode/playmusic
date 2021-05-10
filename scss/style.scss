@@ -5,12 +5,12 @@
     box-sizing: border-box;
 }
 
-// ------var
+// ------var---------------------
 $light: #dde1e7;
 $dark:#333;
 $colr-texto:#333333b4;
 $background: rgb(255, 255, 255);
-$sol: rgb(52, 140, 235);
+$sol: rgb(255, 255, 255);
 $grisClaro: #C8C8C8;
 
 
@@ -29,16 +29,29 @@ $arriba-abajo4:-2px -2px 5px #ffff,
 inset -2px -2px 5px rgba(255, 255, 255, 0.3),
 inset 3px 3px 6px rgba(0, 0, 0, 0.1);
 
-// .outer-shadow {
-//     box-shadow: $arriba-abajo1;
-// }
 
-// ------var
+
+body {
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+}
 
 body {
     &.dark {
         background: $light;
     }
+}
+
+.boton-dark .toogle-theme::before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: #000;
+}
+
+body.dark .boton-dark .toogle-theme::before {
+    content: '\f185 ';
+    font-family: fontAwesome;
+    color: #ffffff;
 }
 
 .content_music {
@@ -67,54 +80,30 @@ body {
         }
 
         .wrapper {
-            .top_bar {
-                .boton-dark {
-                    .toogle-theme {
-                        box-shadow: $arriba-abajo4;
-                        width: 40px;
-                        height: 40px;
-                        line-height: 40%;
-                        border-radius: 50%;
-                        display: grid;
-                        place-items: center;
-                        position: relative;
-                        overflow: hidden;
-                        transition: transform 0.5s ease;
+            position: relative;
+            .boton-dark {
+                .toogle-theme {
+                    box-shadow: $arriba-abajo4;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40%;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    cursor: pointer;
+                    position: relative;
+                    font-size: 1.4rem;
+                    overflow: hidden;
+                    transition: transform 0.5s ease;
 
-                        &:hover {
-                            transform: scale(1.1);
-                        }
-
-                        i {
-                            font-size: 25px;
-                            position: absolute;
-                            transition: transform 0.5s ease, opacity 0.5s ease, color 0.5s ease;
-                        }
-
-                        .fa-sun {
-                            color: $sol;
-                            opacity: 0;
-                            transform: translateX(50px);
-                        }
-
-                        .fa-moon {
-                            color: #000;
-                            transform: translateX(0);
-                        }
+                    &:hover {
+                        transform: scale(1.1);
                     }
 
-                    .checkbox {
-                        display: none;
-                    }
-
-                    .checkbox:checked~.toogle-theme .fa-sun {
-                        opacity: 1;
-                        transform: translateX(0px);
-                    }
-
-                    .checkbox:checked~.toogle-theme .fa-moon {
-                        opacity: 0;
-                        transform: translateX(-50px);
+                    i {
+                        font-size: 25px;
+                        position: absolute;
+                        transition: transform 0.5s ease, opacity 0.5s ease, color 0.5s ease;
                     }
                 }
             }
@@ -279,6 +268,8 @@ body {
                     place-content: center;
 
                     i {
+                        font-size: 33px;
+
                         &:hover {
                             transform: scale(0.9);
                         }
@@ -324,5 +315,89 @@ body {
                 }
             }
         }
+
+        .musicList {
+            position: absolute;
+            left: 0;
+            // bottom: 0;
+            bottom: -5px; // falta revisarlo con javascript
+            opacity: 0;
+            pointer-events: none;
+            background: linear-gradient(to left, rgba(255, 0, 247, 0.076), rgba(34, 0, 255, 0.118));
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.282);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: $arriba-abajo1;
+            transition: all 0.14s ease-in-out;
+
+            .header {
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .row-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 15px;
+                    color: $colr-texto;
+
+                    i {
+                        cursor: default;
+                    }
+
+                    span {
+                        margin-left: 15px;
+                    }
+                }
+
+                #close {
+                    font-size: 22px;
+                    color: rgb(151, 36, 36);
+                }
+            }
+
+            .ultra {
+                margin: 5px;
+                max-height: 310px;
+                overflow: auto;
+            }
+
+            // para eliminar el scrolblar
+            .ultra::-webkit-scrollbar {
+                width: 0px;
+            }
+
+            li {
+                margin-bottom: 0;
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+
+                p {
+                    margin-top: 0;
+                    margin-bottom: 1px;
+                }
+            }
+
+            hr {
+                margin: 5px;
+                border: 0;
+                border-top: 1px solid rgba(51, 51, 51, 0.275);
+            }
+        }
+
+        .musicList.show {
+            bottom: 0;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
     }
 }
