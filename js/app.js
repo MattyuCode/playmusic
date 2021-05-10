@@ -28,13 +28,15 @@ const wrApper = document.querySelector('.wrapper'),
     musicName = wrApper.querySelector('.song_details .name'),
     musicArtist = wrApper.querySelector('.song_details  .artist'),
     musicAudio = wrApper.querySelector('#audioSong'),
-    playPauseBtn = wrApper.querySelector('.play-pause');
+    playPauseBtn = wrApper.querySelector('.play-pause'),
+    prevBtn = wrApper.querySelector('#prev'),
+    nextBtn = wrApper.querySelector('#next');
 
 
-let musicIndex = 10;
+let musicIndex = 15;
 
 window.addEventListener('load', () => {
-    loadMusic(musicIndex);
+    loadMusic(musicIndex); // llamar a la función de carga de música una vez a la ventana
 })
 
 // función de cargar música
@@ -56,15 +58,41 @@ function playMusic() {
 function pauseMusic() {
     wrApper.classList.remove('paused');
     playPauseBtn.querySelector('i').innerText = 'play_circle';
-
     musicAudio.pause();
 }
 
+// funcion de musica siguiente
+function nextMusic() {
+    // aquí solo incrementaremos el índice en 1
+    musicIndex++;
+    // si musicIndex es mayor que la longitud de la matriz, musicIndex será 1, por lo que se reproducirá la primera canción
+    musicIndex > listMusicaAll.length ? musicIndex = 1 : musicIndex = musicIndex;
+    loadMusic(musicIndex);
+    playMusic();
+}
 
+// funcion de musica anterior
+function prevMusic() {
+    // aquí solo disminuiremos el índice en 1
+    musicIndex--;
+    // si musicIndex es menor que 1 musicIndex tendrá la longitud de la matriz, por lo que se reproducirá la última canción
+    musicIndex < 1 ? musicIndex = listMusicaAll.length : musicIndex = musicIndex;
+    loadMusic(musicIndex);
+    playMusic();
+}
+
+// play musica evento al botón
 playPauseBtn.addEventListener('click', () => {
     const isMusicPause = wrApper.classList.contains('paused');
     isMusicPause ? pauseMusic() : playMusic();
 });
- {
-    /* <i class="material-icons">play_circle</i> */
-}
+
+// musica siguiente con evento
+nextBtn.addEventListener('click', () => {
+    nextMusic(); // llamar a la siguiente función de música
+});
+
+// musica anterior con evento
+prevBtn.addEventListener('click', () => {
+    prevMusic();
+});
