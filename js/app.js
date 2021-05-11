@@ -30,10 +30,12 @@ const wrApper = document.querySelector('.wrapper'),
     musicAudio = wrApper.querySelector('#audioSong'),
     playPauseBtn = wrApper.querySelector('.play-pause'),
     prevBtn = wrApper.querySelector('#prev'),
-    nextBtn = wrApper.querySelector('#next');
+    nextBtn = wrApper.querySelector('#next'),
+    progressArea = wrApper.querySelector('.progress_area'),
+    progressBar = wrApper.querySelector('.progress_bar');
 
 
-let musicIndex = 15;
+let musicIndex = 6;
 
 window.addEventListener('load', () => {
     loadMusic(musicIndex); // llamar a la función de carga de música una vez a la ventana
@@ -95,4 +97,62 @@ nextBtn.addEventListener('click', () => {
 // musica anterior con evento
 prevBtn.addEventListener('click', () => {
     prevMusic();
+});
+
+// actualizar la barra de progreso según la hora actual de la música
+musicAudio.addEventListener('timeupdate', (e) => {
+    const currentTime = e.target.currentTime; // obteniendo la hora actual de la canción
+    const duration = e.target.duration; // obteniendo la duración total de la canción
+
+    let progressWidth = (currentTime / duration) * 100;
+    progressBar.style.width = `${progressWidth}%`;
+
+    let musicCurrentTime = wrApper.querySelector('.current'),
+        musicDuration = wrApper.querySelector('.duration');
+
+    musicAudio.addEventListener('loadeddata', () => {
+
+        // actualizar la duración total de la canción
+        let audioDuration = musicAudio.duration;
+        let totalMin = Math.floor(audioDuration / 60);
+        let totalSec = Math.floor(audioDuration % 60);
+        if (totalSec < 10) { // sumando 0 si se es menor que 10
+            totalSec = `0${totalSec}`;
+        }
+        musicDuration.innerText = `${totalMin}:${totalSec}`;
+    });
+
+    // cargar tocando canción hora actual
+    let currentMin = Math.floor(currentTime / 60);
+    let currentSec = Math.floor(currentTime % 60);
+    if (currentSec < 10) { // sumando 0 si se es menor que 10
+        currentSec = `0${currentSec}`;
+    }
+
+    musicCurrentTime.innerText = `${currentMin}:${currentSec}`;
+});
+
+// Permite actualizar la hora actual de la canción de reproducción de acuerdo con el ancho de la barra de progreso.
+progressArea.addEventListener('click', (e) => {
+    let progressWidthval = progressArea.clientWidth; // obteniendo el ancho de la barra de progreso
+    let clickedOffSetX = e.offsetX; // obteniendo el valor de compensación X
+    let songDuration = musicAudio.duration; // obteniendo la duración total de la canción
+
+    musicAudio.currentTime = (clickedOffSetX / progressWidthval) * songDuration;
+    playMusic();
+});
+
+// vamos a trabajar en repetir la canción aleatoria de acuerdo con el icono
+const repeatBton = wrApper.querySelector('#repeat-list');
+repeatBton.addEventListener('click', () => {
+    // first we get the innerText of the icon the we'll change accord
+    let getText = repeatBton.innerText; // obteniendo innerText de icono
+    switch (getText) {
+        case 'repeat': // si este icono se repite
+            repeatBton.innerText = 'repeat_one'
+            break;
+
+        default:
+            break;
+    }
 });
