@@ -23,19 +23,23 @@ if (localStorage.getItem('ModoDarkAgregado') === 'true') {
   -------------------------------------------
 */
 
-const wrApper = document.querySelector('.wrapper'),
-    musicImg = wrApper.querySelector('.image_area img'),
-    musicName = wrApper.querySelector('.song_details .name'),
-    musicArtist = wrApper.querySelector('.song_details  .artist'),
-    musicAudio = wrApper.querySelector('#audioSong'),
-    playPauseBtn = wrApper.querySelector('.play-pause'),
-    prevBtn = wrApper.querySelector('#prev'),
-    nextBtn = wrApper.querySelector('#next'),
-    progressArea = wrApper.querySelector('.progress_area'),
-    progressBar = wrApper.querySelector('.progress_bar');
+const wrapper = document.querySelector('.wrapper'),
+    musicImg = wrapper.querySelector('.image_area img'),
+    musicName = wrapper.querySelector('.song_details .name'),
+    musicArtist = wrapper.querySelector('.song_details  .artist'),
+    musicAudio = wrapper.querySelector('#audioSong'),
+    playPauseBtn = wrapper.querySelector('.play-pause'),
+    prevBtn = wrapper.querySelector('#prev'),
+    nextBtn = wrapper.querySelector('#next'),
+    progressArea = wrapper.querySelector('.progress_area'),
+    progressBar = wrapper.querySelector('.progress_bar');
 
+// volver a declara con document para que funcione
+const musicList = document.querySelector('.music-list'),
+    showMoreBtn = wrapper.querySelector('#more-music'),
+    hideMusicBtn = musicList.querySelector('#close');
 
-let musicIndex = 6;
+let musicIndex = 1;
 
 window.addEventListener('load', () => {
     loadMusic(musicIndex); // llamar a la función de carga de música una vez a la ventana
@@ -51,14 +55,14 @@ function loadMusic(indexNumb) {
 
 // función de reproducción música
 function playMusic() {
-    wrApper.classList.add('paused');
+    wrapper.classList.add('paused');
     playPauseBtn.querySelector('i').innerText = 'pause';
     musicAudio.play();
 }
 
 // función de pausar música
 function pauseMusic() {
-    wrApper.classList.remove('paused');
+    wrapper.classList.remove('paused');
     playPauseBtn.querySelector('i').innerText = 'play_circle';
     musicAudio.pause();
 }
@@ -85,7 +89,7 @@ function prevMusic() {
 
 // play musica evento al botón
 playPauseBtn.addEventListener('click', () => {
-    const isMusicPause = wrApper.classList.contains('paused');
+    const isMusicPause = wrapper.classList.contains('paused');
     isMusicPause ? pauseMusic() : playMusic();
 });
 
@@ -107,8 +111,8 @@ musicAudio.addEventListener('timeupdate', (e) => {
     let progressWidth = (currentTime / duration) * 100;
     progressBar.style.width = `${progressWidth}%`;
 
-    let musicCurrentTime = wrApper.querySelector('.current'),
-        musicDuration = wrApper.querySelector('.duration');
+    let musicCurrentTime = wrapper.querySelector('.current'),
+        musicDuration = wrapper.querySelector('.duration');
 
     musicAudio.addEventListener('loadeddata', () => {
 
@@ -143,16 +147,100 @@ progressArea.addEventListener('click', (e) => {
 });
 
 // vamos a trabajar en repetir la canción aleatoria de acuerdo con el icono
-const repeatBton = wrApper.querySelector('#repeat-list');
+const repeatBton = wrapper.querySelector('#repeat-list');
+
 repeatBton.addEventListener('click', () => {
     // first we get the innerText of the icon the we'll change accord
     let getText = repeatBton.innerText; // obteniendo innerText de icono
     switch (getText) {
-        case 'repeat': // si este icono se repite
-            repeatBton.innerText = 'repeat_one'
+        case 'repeat': // si este icono se repite, cámbielo a repite_uno
+            repeatBton.innerText = 'repeat_one';
+            repeatBton.setAttribute('title', 'Song looped');
             break;
-
+        case 'repeat_one': // si el icono es repetido uno, cámbielo a aleatorio
+            repeatBton.innerText = 'shuffle';
+            repeatBton.setAttribute('title', 'Playback shuffle');
+            break;
         default:
+            'shuffle'
+            repeatBton.innerText = 'repeat';
+            repeatBton.setAttribute('title', 'Playlist looped');
             break;
     }
 });
+
+// 
+musicAudio.addEventListener('ended', () => {
+
+    let getText = repeatBton.innerText;
+    // hagamos diferentes cambios en diferentes íconos haga clic usando el switch
+    switch (getText) {
+        case 'repeat': // si este icono es repetir, simplemente llamamos a la función nextmusic para que se reproduzca la siguiente canción
+            nextMusic();
+            break;
+        case 'repeat_one': // Si el ícono es el ícono de repetición, cambiaremos la hora actual de la canción que se está reproduciendo a 0 para que la canción se reproduzca desde el principio.
+            musicAudio.currentTime = 0;
+            loadMusic(musicIndex);
+            playMusic()
+            break;
+        case 'shuffle': // si el icono es barajar el cambio si se repite la generación de índice aleatorio entre el rango máximo de longitud de la matriz
+            let randIndex = Math.floor((Math.random() * listMusicaAll.length) + 1);
+            do {
+                randIndex = Math.floor((Math.random() * listMusicaAll.length) + 1);
+            } while (musicIndex == randIndex);
+            musicIndex = randIndex; //  pasando randomIndex a musicIndex para que se reproduzca la canción aleatoria
+            loadMusic(musicIndex); // llamar a la función loadmusic
+            playMusic(); // llamar a la función playMusic
+            break;
+    }
+});
+
+
+showMoreBtn.onclick = () => { // this is copied in FM
+    musicList.classList.toggle('show');
+}
+// ESTO FUNCIONA IGUAL EL QUE DE ARRIBA 
+
+// showMoreBtn.addEventListener('click', () => {
+//     musicList.classList.toggle('show');
+// });
+
+// hideMusicBtn.addEventListener('click', () => {
+//     showMoreBtn.click();
+// });
+
+hideMusicBtn.onclick = () => {
+    showMoreBtn.click();
+}
+
+const ulTag = document.querySelector('.ultra');
+
+for (let i = 0; i < listMusicaAll.length; i++) {
+    let liTag = ` 
+     <li>
+         <div class="row-content1">
+           <span>${listMusicaAll[i].name}</span>
+           <p>${listMusicaAll[i].artist}</p> 
+        </div>
+        <audio class="${listMusicaAll[i].src}" src="music/${listMusicaAll[i].src}.mp3"></audio>
+        <span id="${listMusicaAll[i].src}" class="audio-duration">3:40</span>
+     </li>
+     <hr>`;
+
+
+    ulTag.insertAdjacentHTML('beforeend', liTag);
+
+    const liAudioTag = ulTag.querySelector(`.${listMusicaAll[i].src}`);
+    const liAudioDuration = ulTag.querySelector(`#${listMusicaAll[i].src}`);
+
+    // liAudioTag.addEventListener('loadeddata', () => {
+    //     let audioDuration = liAudioTag.duration;
+    //     let totalMin = Math.floor(audioDuration / 60);
+    //     let totalSec = Math.floor(audioDuration % 60);
+    //     if (totalSec < 10) { // sumando 0 si se es menor que 10
+    //         totalSec = `0${totalSec}`;
+    //     }
+    //     liAudioDuration.innerText = `${totalMin}:${totalSec}`;
+    // })
+
+}

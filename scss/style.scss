@@ -7,7 +7,8 @@
 
 // ------var---------------------
 $light: #dde1e7;
-$dark:#333;
+// $dark:#333;
+$dark:rgb(17, 17, 26);
 $colr-texto:#333333b4;
 $background: rgb(255, 255, 255);
 $sol: rgb(255, 255, 255);
@@ -55,6 +56,8 @@ body.dark .boton-dark .toogle-theme::before {
 }
 
 .content_music {
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
     background: $dark;
 
     body.dark & {
@@ -179,7 +182,7 @@ body.dark .boton-dark .toogle-theme::before {
 
                 .progress_bar {
                     height: inherit;
-                    width: 50%;
+                    width: 0%;
                     position: relative;
                     border-radius: inherit;
                     background: linear-gradient(90deg, rgb(0, 195, 255), rgb(9, 221, 51));
@@ -316,11 +319,11 @@ body.dark .boton-dark .toogle-theme::before {
             }
         }
 
-        .musicList {
+        .music-list {
             position: absolute;
             left: 0;
-            // bottom: 0;
-            bottom: -5px; // falta revisarlo con javascript
+            bottom: 0;
+            // bottom: -5px; // falta revisarlo con javascript
             opacity: 0;
             pointer-events: none;
             background: linear-gradient(to left, rgba(255, 0, 247, 0.076), rgba(34, 0, 255, 0.118));
@@ -358,8 +361,9 @@ body.dark .boton-dark .toogle-theme::before {
                 }
 
                 #close {
+                    cursor: pointer;
                     font-size: 22px;
-                    color: rgb(151, 36, 36);
+                    color: #ff0202;
                 }
             }
 
@@ -375,6 +379,7 @@ body.dark .boton-dark .toogle-theme::before {
             }
 
             li {
+                cursor: pointer;
                 margin-bottom: 0;
                 display: flex;
                 justify-content: space-between;
@@ -393,7 +398,7 @@ body.dark .boton-dark .toogle-theme::before {
             }
         }
 
-        .musicList.show {
+        .music-list.show {
             bottom: 0;
             opacity: 1;
             pointer-events: auto;

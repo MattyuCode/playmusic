@@ -28,7 +28,9 @@ body.dark .boton-dark .toogle-theme::before {
 }
 
 .content_music {
-  background: #333;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  background: #11111a;
 }
 
 body.dark .content_music {
@@ -53,7 +55,7 @@ body.dark .content_music {
 }
 
 body.dark .content_music .card {
-  background: #333;
+  background: #11111a;
   color: beige;
 }
 
@@ -180,7 +182,7 @@ body.dark .content_music .card .wrapper .song_details {
 
 .content_music .card .wrapper .progress_area .progress_bar {
   height: inherit;
-  width: 50%;
+  width: 0%;
   position: relative;
   border-radius: inherit;
   background: -webkit-gradient(linear, left top, right top, from(#00c3ff), to(#09dd33));
@@ -345,10 +347,10 @@ body.dark .content_music .card .wrapper .song_details {
   font-size: 30px;
 }
 
-.content_music .card .musicList {
+.content_music .card .music-list {
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: 0;
   opacity: 0;
   pointer-events: none;
   background: -webkit-gradient(linear, right top, left top, from(rgba(255, 0, 247, 0.076)), to(rgba(34, 0, 255, 0.118)));
@@ -369,7 +371,7 @@ body.dark .content_music .card .wrapper .song_details {
   transition: all 0.14s ease-in-out;
 }
 
-.content_music .card .musicList .header {
+.content_music .card .music-list .header {
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,7 +384,7 @@ body.dark .content_music .card .wrapper .song_details {
           justify-content: space-between;
 }
 
-.content_music .card .musicList .header .row-content {
+.content_music .card .music-list .header .row-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -396,30 +398,32 @@ body.dark .content_music .card .wrapper .song_details {
   color: #333333b4;
 }
 
-.content_music .card .musicList .header .row-content i {
+.content_music .card .music-list .header .row-content i {
   cursor: default;
 }
 
-.content_music .card .musicList .header .row-content span {
+.content_music .card .music-list .header .row-content span {
   margin-left: 15px;
 }
 
-.content_music .card .musicList .header #close {
+.content_music .card .music-list .header #close {
+  cursor: pointer;
   font-size: 22px;
-  color: #972424;
+  color: #ff0202;
 }
 
-.content_music .card .musicList .ultra {
+.content_music .card .music-list .ultra {
   margin: 5px;
   max-height: 310px;
   overflow: auto;
 }
 
-.content_music .card .musicList .ultra::-webkit-scrollbar {
+.content_music .card .music-list .ultra::-webkit-scrollbar {
   width: 0px;
 }
 
-.content_music .card .musicList li {
+.content_music .card .music-list li {
+  cursor: pointer;
   margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,18 +434,18 @@ body.dark .content_music .card .wrapper .song_details {
   list-style: none;
 }
 
-.content_music .card .musicList li p {
+.content_music .card .music-list li p {
   margin-top: 0;
   margin-bottom: 1px;
 }
 
-.content_music .card .musicList hr {
+.content_music .card .music-list hr {
   margin: 5px;
   border: 0;
   border-top: 1px solid rgba(51, 51, 51, 0.275);
 }
 
-.content_music .card .musicList.show {
+.content_music .card .music-list.show {
   bottom: 0;
   opacity: 1;
   pointer-events: auto;

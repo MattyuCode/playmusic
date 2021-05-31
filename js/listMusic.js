@@ -21,13 +21,13 @@ let listMusicaAll = [{
         src: 'Noche de Reyes',
         number: 3
     },
-    {
-        name: 'Poli (Zoe Cover)',
-        artist: 'Carlos Sadness',
-        img: 'noche',
-        src: 'Poli (Zoe Cover)',
-        number: 4
-    },
+    // {
+    //     name: 'Poli (Zoe Cover)',
+    //     artist: 'Carlos Sadness',
+    //     img: 'noche',
+    //     src: 'Poli (Zoe Cover)',
+    //     number: 4
+    // },
     {
         name: 'Volcanes Dormidos',
         artist: 'Carlos Sadness',
@@ -42,13 +42,13 @@ let listMusicaAll = [{
         src: 'Kandinski',
         number: 6
     },
-    {
-        name: 'Amor Papaya (Ft. Caloncho)',
-        artist: 'Carlos Sadness',
-        img: 'DiferentesTiposdeLuz',
-        src: 'Amor Papaya (Ft. Caloncho)',
-        number: 7
-    },
+    // {
+    //     name: 'Amor Papaya (Ft. Caloncho)',
+    //     artist: 'Carlos Sadness',
+    //     img: 'DiferentesTiposdeLuz',
+    //     src: 'Amor Papaya (Ft. Caloncho)',
+    //     number: 7
+    // },
     {
         name: 'Chihuahua',
         artist: 'Carlos Sadness',
