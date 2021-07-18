@@ -39,7 +39,7 @@ const musicList = document.querySelector('.music-list'),
     showMoreBtn = wrapper.querySelector('#more-music'),
     hideMusicBtn = musicList.querySelector('#close');
 
-let musicIndex = 1;
+let musicIndex = 5;
 
 window.addEventListener('load', () => {
     loadMusic(musicIndex); // llamar a la función de carga de música una vez a la ventana
@@ -217,7 +217,7 @@ const ulTag = document.querySelector('.ultra');
 
 for (let i = 0; i < listMusicaAll.length; i++) {
     let liTag = ` 
-     <li>
+     <li li-index"${i}">
          <div class="row-content1">
            <span>${listMusicaAll[i].name}</span>
            <p>${listMusicaAll[i].artist}</p> 
@@ -230,17 +230,40 @@ for (let i = 0; i < listMusicaAll.length; i++) {
 
     ulTag.insertAdjacentHTML('beforeend', liTag);
 
-    const liAudioTag = ulTag.querySelector(`.${listMusicaAll[i].src}`);
-    const liAudioDuration = ulTag.querySelector(`#${listMusicaAll[i].src}`);
+    let liAudioDuration = document.getElementById(`${listMusicaAll[i].src}`);
+    let liAudioTag = document.getElementById(`${listMusicaAll[i].src}`);
 
-    // liAudioTag.addEventListener('loadeddata', () => {
-    //     let audioDuration = liAudioTag.duration;
-    //     let totalMin = Math.floor(audioDuration / 60);
-    //     let totalSec = Math.floor(audioDuration % 60);
-    //     if (totalSec < 10) { // sumando 0 si se es menor que 10
-    //         totalSec = `0${totalSec}`;
-    //     }
-    //     liAudioDuration.innerText = `${totalMin}:${totalSec}`;
-    // })
+    liAudioTag.addEventListener('loadeddata', () => {
+        let audioDuration = liAudioTag.duration;
+        let totalMin = Math.floor(audioDuration / 60);
+        let totalSec = Math.floor(audioDuration % 60);
+        if (totalSec < 10) { // sumando 0 si se es menor que 10
+            totalSec = `0${totalSec}`;
+        }
 
+        liAudioDuration.innerText = `${totalMin}:${totalSec}`;
+    });
+
+}
+
+const TodoLiTag = ulTag.querySelectorAll('li');
+for (let j = 0; j < TodoLiTag.length; j++) {
+
+    if (TodoLiTag[j].getAttribute('li-index') === musicIndex) {
+        // TodoLiTag.classList;1
+        // document.getElementById('li').classList.add('.playing');
+        TodoLiTag[j].classList.add('playing');
+        // let TodoLiTag[j].classList.add('playing');
+    }
+    TodoLiTag[j].setAttribute('onclick', 'clicked(this)');
+}
+
+let recent_volume = document.querySelector('#volume');
+let volume_show = document.querySelector('#volume_show');
+
+
+let track = document.createElement('audio');
+function volume_change() {
+    volume_show.innerText = recent_volume.value;
+    track.volume = recent_volume.value / 100;
 }

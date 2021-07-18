@@ -371,37 +371,42 @@ body.dark .boton-dark .toogle-theme::before {
                 margin: 5px;
                 max-height: 310px;
                 overflow: auto;
-            }
 
-            // para eliminar el scrolblar
-            .ultra::-webkit-scrollbar {
-                width: 0px;
-            }
-
-            li {
-                cursor: pointer;
-                margin-bottom: 0;
-                display: flex;
-                justify-content: space-between;
-                list-style: none;
-
-                p {
-                    margin-top: 0;
-                    margin-bottom: 1px;
+                li.playing {
+                    color: rgb(78, 7, 82);
                 }
             }
+        }
 
-            hr {
-                margin: 5px;
-                border: 0;
-                border-top: 1px solid rgba(51, 51, 51, 0.275);
+        // para eliminar el scrolblar
+        .ultra::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        li {
+            cursor: pointer;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 1px;
             }
         }
 
-        .music-list.show {
-            bottom: 0;
-            opacity: 1;
-            pointer-events: auto;
+
+        hr {
+            margin: 5px;
+            border: 0;
+            border-top: 1px solid rgba(51, 51, 51, 0.275);
         }
+    }
+
+    .music-list.show {
+        bottom: 0;
+        opacity: 1;
+        pointer-events: auto;
     }
 }
