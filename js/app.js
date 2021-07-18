@@ -39,7 +39,7 @@ const musicList = document.querySelector('.music-list'),
     showMoreBtn = wrapper.querySelector('#more-music'),
     hideMusicBtn = musicList.querySelector('#close');
 
-let musicIndex = 5;
+let musicIndex = 1;
 
 window.addEventListener('load', () => {
     loadMusic(musicIndex); // llamar a la función de carga de música una vez a la ventana
@@ -258,12 +258,3 @@ for (let j = 0; j < TodoLiTag.length; j++) {
     TodoLiTag[j].setAttribute('onclick', 'clicked(this)');
 }
 
-let recent_volume = document.querySelector('#volume');
-let volume_show = document.querySelector('#volume_show');
-
-
-let track = document.createElement('audio');
-function volume_change() {
-    volume_show.innerText = recent_volume.value;
-    track.volume = recent_volume.value / 100;
-}
